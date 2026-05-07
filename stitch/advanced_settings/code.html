@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HydraTrack - Advanced Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2cb9e8",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111d21",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen pb-24">
+<!-- Header -->
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 py-4 flex items-center justify-between border-b border-primary/10">
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center size-10 rounded-full bg-white dark:bg-slate-800 shadow-sm text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight">Advanced Settings</h1>
+</div>
+<button class="text-primary font-semibold text-sm px-4 py-2 rounded-full hover:bg-primary/10">Reset</button>
+</header>
+<main class="max-w-md mx-auto p-4 space-y-6">
+<!-- Reminder Settings Section -->
+<section class="space-y-3">
+<h2 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 ml-2">Reminder Settings</h2>
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-4 px-4 py-4 border-b border-slate-50 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<div class="flex-1">
+<p class="text-sm font-semibold">Schedule</p>
+</div>
+<p class="text-sm text-slate-500">Every 2 hours</p>
+<span class="material-symbols-outlined text-slate-300 text-sm">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 px-4 py-4 border-b border-slate-50 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer">
+<span class="material-symbols-outlined text-primary">notifications_active</span>
+<div class="flex-1">
+<p class="text-sm font-semibold">Sound</p>
+</div>
+<p class="text-sm text-slate-500">Nature Breeze</p>
+<span class="material-symbols-outlined text-slate-300 text-sm">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 px-4 py-4 border-b border-slate-50 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer">
+<span class="material-symbols-outlined text-primary">vibration</span>
+<div class="flex-1">
+<p class="text-sm font-semibold">Mode</p>
+</div>
+<p class="text-sm text-slate-500">Sound &amp; Haptic</p>
+<span class="material-symbols-outlined text-slate-300 text-sm">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 px-4 py-4 hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer">
+<span class="material-symbols-outlined text-primary">bolt</span>
+<div class="flex-1">
+<p class="text-sm font-semibold">Smart Alerts</p>
+</div>
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- General Settings Section -->
+<section class="space-y-3">
+<h2 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 ml-2">General Settings</h2>
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-4 px-4 py-4 border-b border-slate-50 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer">
+<span class="material-symbols-outlined text-primary">straighten</span>
+<div class="flex-1">
+<p class="text-sm font-semibold">Volume Unit</p>
+</div>
+<p class="text-sm text-slate-500 font-medium">ml (Milliliters)</p>
+</div>
+<div class="flex items-center gap-4 px-4 py-4 border-b border-slate-50 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer">
+<span class="material-symbols-outlined text-primary">wb_sunny</span>
+<div class="flex-1">
+<p class="text-sm font-semibold">Wake-up Time</p>
+</div>
+<p class="text-sm text-slate-500">07:00 AM</p>
+</div>
+<div class="flex items-center gap-4 px-4 py-4 border-b border-slate-50 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer">
+<span class="material-symbols-outlined text-primary">bedtime</span>
+<div class="flex-1">
+<p class="text-sm font-semibold">Sleep Time</p>
+</div>
+<p class="text-sm text-slate-500">10:30 PM</p>
+</div>
+<div class="flex items-center gap-4 px-4 py-4 hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer">
+<span class="material-symbols-outlined text-primary">language</span>
+<div class="flex-1">
+<p class="text-sm font-semibold">Language</p>
+</div>
+<p class="text-sm text-slate-500">English (US)</p>
+</div>
+</div>
+</section>
+<!-- Personal Data Section -->
+<section class="space-y-3">
+<h2 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 ml-2">Personal Data</h2>
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-4 px-4 py-4 border-b border-slate-50 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer">
+<span class="material-symbols-outlined text-primary">person</span>
+<div class="flex-1">
+<p class="text-sm font-semibold">Gender</p>
+</div>
+<p class="text-sm text-slate-500">Male</p>
+</div>
+<div class="flex items-center gap-4 px-4 py-4 border-b border-slate-50 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer">
+<span class="material-symbols-outlined text-primary">monitor_weight</span>
+<div class="flex-1">
+<p class="text-sm font-semibold">Weight</p>
+</div>
+<p class="text-sm text-slate-500">78 kg</p>
+</div>
+<div class="flex items-center gap-4 px-4 py-4 hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer">
+<span class="material-symbols-outlined text-primary">fitness_center</span>
+<div class="flex-1">
+<p class="text-sm font-semibold">Activity Level</p>
+</div>
+<p class="text-sm text-slate-500">Moderate (3-5 days)</p>
+</div>
+</div>
+<p class="px-2 text-[10px] leading-relaxed text-slate-400 italic">These details help us calculate your daily hydration target more accurately.</p>
+</section>
+<!-- Danger Zone -->
+<div class="pt-4">
+<button class="w-full py-4 text-red-500 bg-red-50 dark:bg-red-500/10 rounded-xl font-bold text-sm border border-red-100 dark:border-red-500/20">
+                Clear All Data
+            </button>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border-t border-slate-100 dark:border-slate-800 px-6 py-3 pb-8">
+<div class="max-w-md mx-auto flex justify-between items-center">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">water_drop</span>
+<span class="text-[10px] font-medium">Hydrate</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="text-[10px] font-medium">Stats</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">settings</span>
+<span class="text-[10px] font-bold">Settings</span>
+</a>
+</div>
+</nav>
+<style>
+        .fill-1 { font-variation-settings: 'FILL' 1; }
+    </style>
+</body></html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HydraTrack - Select Cup Size</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2cb9e8",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111d21",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 py-4 flex items-center justify-between">
+<button class="flex items-center justify-center size-10 rounded-full bg-white dark:bg-slate-800 shadow-sm text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold font-display">Select Cup Size</h1>
+<div class="size-10"></div> <!-- Spacer for alignment -->
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-4 pb-32">
+<div class="mt-4 mb-6">
+<h2 class="text-2xl font-extrabold tracking-tight">Quick Add</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Tap a size to log your water intake</p>
+</div>
+<!-- Grid Layout for Cup Selection -->
+<div class="grid grid-cols-2 gap-4">
+<!-- 100ml -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center group active:scale-95 transition-transform">
+<div class="size-24 mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl">water_drop</span>
+</div>
+<h3 class="font-bold text-lg">100 ml</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Small Glass</p>
+</div>
+<!-- 200ml -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center group active:scale-95 transition-transform">
+<div class="size-24 mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-5xl">local_cafe</span>
+</div>
+<h3 class="font-bold text-lg">200 ml</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Medium Glass</p>
+</div>
+<!-- 300ml -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center group active:scale-95 transition-transform">
+<div class="size-24 mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-5xl">glass_cup</span>
+</div>
+<h3 class="font-bold text-lg">300 ml</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Large Glass</p>
+</div>
+<!-- 500ml -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center group active:scale-95 transition-transform">
+<div class="size-24 mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-5xl">water_full</span>
+</div>
+<h3 class="font-bold text-lg">500 ml</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Water Bottle</p>
+</div>
+<!-- 1000ml -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center group active:scale-95 transition-transform col-span-2">
+<div class="flex items-center gap-6 w-full px-4">
+<div class="size-20 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-5xl">eco</span>
+</div>
+<div class="text-left flex-1">
+<h3 class="font-bold text-xl">1000 ml</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Large Hydration Bottle</p>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Custom Amount Button -->
+<div class="mt-8">
+<button class="w-full bg-primary hover:bg-primary/90 text-slate-900 font-bold py-4 rounded-full shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">edit</span>
+                Custom Amount
+            </button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 px-6 pb-8 pt-3 flex justify-between items-center z-20">
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">water_drop</span>
+<span class="text-[10px] font-medium font-display uppercase tracking-wider">Today</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-[10px] font-medium font-display uppercase tracking-wider">History</span>
+</a>
+<a class="flex flex-col items-center gap-1 -mt-8" href="#">
+<div class="size-14 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/40 text-slate-900">
+<span class="material-symbols-outlined material-symbols-fill text-3xl">add</span>
+</div>
+<span class="text-[10px] font-bold text-primary font-display uppercase tracking-wider mt-1">Hydrate</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">insights</span>
+<span class="text-[10px] font-medium font-display uppercase tracking-wider">Stats</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium font-display uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+<!-- Visual Background Element -->
+<div class="fixed -bottom-20 -right-20 size-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<div class="fixed -top-20 -left-20 size-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+</body></html>

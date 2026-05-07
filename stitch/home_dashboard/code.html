@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HydraTrack Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2cb9e8",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111d21",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .progress-ring-circle {
+            transition: stroke-dashoffset 0.35s;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Top Header Section -->
+<header class="flex items-center justify-between p-6 bg-background-light dark:bg-background-dark sticky top-0 z-10">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border-2 border-primary">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="Close up portrait of a smiling person" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCccYWTqThDQCBkYu-nlCdEPGmX-WqAUxi0UW6oj1JjIl2CxlWPs_BFnbeLf1yQobtMjEBIltHuBsrh0TFLThFoqVLCtathH_luCoda6UA3TG0A9YUtbKChoB8JNadCgPQhTTT88SNCF1FcEY6-hGWFB8a3xI6VKoqp6bNUHp3PozQPF7JswGSJUfhBkb9NJ7XJxKFX-z8ZP_zGErud4HkhusutztxwaF_Fks1PT5OSkH6gNz41QXW-lPahzIzm88X39eOPzd0R_po"/>
+</div>
+<h1 class="text-xl font-bold tracking-tight">HydraTrack</h1>
+</div>
+<button class="size-10 flex items-center justify-center rounded-full bg-slate-200/50 dark:bg-slate-800/50">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">notifications</span>
+</button>
+</header>
+<main class="flex-1 px-6 pb-24">
+<!-- Progress Circular Indicator -->
+<div class="flex flex-col items-center justify-center py-8">
+<div class="relative flex items-center justify-center">
+<!-- Outer Glow/Track -->
+<svg class="size-64">
+<circle class="text-slate-200 dark:text-slate-800" cx="128" cy="128" fill="transparent" r="110" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-primary progress-ring-circle" cx="128" cy="128" fill="transparent" r="110" stroke="currentColor" stroke-dasharray="691" stroke-dashoffset="172.75" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="text-primary text-4xl font-bold">900 / 1200</span>
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium mt-1">ml</span>
+<p class="text-slate-400 dark:text-slate-500 text-xs uppercase tracking-widest mt-4 font-semibold">Daily Goal</p>
+<div class="mt-2 px-3 py-1 bg-primary/10 rounded-full">
+<span class="text-primary text-xs font-bold">75% Done</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Drink Water Action Button -->
+<div class="mt-4">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-5 rounded-xl flex items-center justify-center gap-3 shadow-lg shadow-primary/20 active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-2xl">water_drop</span>
+<span class="text-lg">Drink Water</span>
+</button>
+</div>
+<!-- Upcoming Reminders -->
+<div class="mt-10">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold">Upcoming Reminders</h3>
+<button class="text-primary text-sm font-semibold">View All</button>
+</div>
+<div class="space-y-3">
+<!-- Reminder Item -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-lg flex items-center justify-between border border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl">schedule</span>
+</div>
+<div>
+<p class="font-bold">Morning Hydration</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Every day at 08:30</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-primary font-bold">200 ml</span>
+</div>
+</div>
+<!-- Reminder Item -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-lg flex items-center justify-between border border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 text-xl">schedule</span>
+</div>
+<div>
+<p class="font-bold">Post-Breakfast</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Every day at 09:30</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-slate-900 dark:text-slate-100 font-bold">200 ml</span>
+</div>
+</div>
+<!-- Reminder Item -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-lg flex items-center justify-between border border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 text-xl">schedule</span>
+</div>
+<div>
+<p class="font-bold">Pre-Work Sync</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Every day at 10:30</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-slate-900 dark:text-slate-100 font-bold">150 ml</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-6 pb-6 pt-3 z-20">
+<div class="flex items-center justify-between max-w-lg mx-auto">
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="p-1 rounded-full text-primary">
+<span class="material-symbols-outlined fill-1">water_full</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary">Cup</span>
+</a>
+<a class="flex flex-col items-center gap-1 group text-slate-400 dark:text-slate-500" href="#">
+<div class="p-1 rounded-full group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications_active</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-wider">Reminders</span>
+</a>
+<a class="flex flex-col items-center gap-1 group text-slate-400 dark:text-slate-500" href="#">
+<div class="p-1 rounded-full group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-wider">Progress</span>
+</a>
+<a class="flex flex-col items-center gap-1 group text-slate-400 dark:text-slate-500" href="#">
+<div class="p-1 rounded-full group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-wider">Settings</span>
+</a>
+</div>
+</nav>
+</body></html>
